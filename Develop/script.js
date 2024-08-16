@@ -15,18 +15,26 @@ const playGame = function () {
     let userChoice = window.prompt('Enter R, P, or S:');
 
     // If user pressed Cancel, immediately end function
-    if () {
+    if (userChoice == null) {
       return;
     }
 
     // Convert to uppercase to make comparisons easier
-    
+    userChoice.toUpperCase();
 
     // Check that the user made a valid choice
-    if () {
+    if (userChoice != 'R' && userChoice != 'P' && userChoice != 'S') {
       window.alert('Please enter a valid choice.');
     } else {
       //Check what the user input, track the statistics
+
+      if (userChoice == 'R') {
+
+      } else if (userChoice == 'P') {
+
+      } else {
+
+      }
       
 
       // Get random index from array of options
