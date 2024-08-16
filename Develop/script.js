@@ -1,8 +1,17 @@
 const playGame = function () {
 
   // Create an object to track our statistics
-  const stats = statsObject//hint: look at the structure of the print out at the bottom of this function.
+  const stats = {
+    wins:0,
+    losses:0,
+    equals:0,
+    count:{
+      rock:0,
+      paper:0,
+      scissors:0
 
+}
+  }
   // Array of options for computer to pick from
   const options = ['R', 'P', 'S'];
 
