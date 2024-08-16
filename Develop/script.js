@@ -4,7 +4,7 @@ const playGame = function () {
   const stats = {
     wins:0,
     losses:0,
-    equals:0,
+    ties:0,
     count:{
       rock:0,
       paper:0,
@@ -29,7 +29,7 @@ const playGame = function () {
     }
 
     // Convert to uppercase to make comparisons easier
-    userChoice.toUpperCase();
+    userChoice = userChoice.toUpperCase();
 
     // Check that the user made a valid choice
     if (userChoice != 'R' && userChoice != 'P' && userChoice != 'S') {
@@ -38,10 +38,14 @@ const playGame = function () {
       //Check what the user input, track the statistics
 
       if (userChoice == 'R') {
+        stats.rock++;
 
       } else if (userChoice == 'P') {
+        stats.paper++;
 
       } else {
+        stats.scissors++;
+
 
       }
       
@@ -58,9 +62,9 @@ const playGame = function () {
         // write the logic for a tie outcome
 
         
-      } else if (
+      } else if (true)
         // Check every win condition for the player
-        ) {
+     {
         stats.wins++;
         window.alert('You win!');
         
@@ -69,7 +73,7 @@ const playGame = function () {
 
       }
 
-      // Ask user to play again, if not stop the loop
+      keepPlaying = false; // Ask user to play again, if not stop the loop
       
     }
   }
