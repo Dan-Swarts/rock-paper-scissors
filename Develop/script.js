@@ -38,15 +38,13 @@ const playGame = function () {
       //Check what the user input, track the statistics
 
       if (userChoice == 'R') {
-        stats.rock++;
+        stats.count.rock++;
 
       } else if (userChoice == 'P') {
-        stats.paper++;
+        stats.count.paper++;
 
       } else {
-        stats.scissors++;
-
-
+        stats.count.scissors++;
       }
       
 
@@ -55,14 +53,16 @@ const playGame = function () {
       const computerChoice = options[index];
 
       //Alert the user what the computer chose
-      
+      alert(`The computer chose ${computerChoice}`);
 
       // If choices are the same, it's a tie
       if (userChoice === computerChoice) {
         // write the logic for a tie outcome
-
-        
-      } else if (true)
+        stats.ties++;
+        window.alert('You tied.')
+      } else if ((userChoice === 'R' && computerChoice === 'S') 
+          || (userChoice === 'P' && computerChoice === 'R') 
+          || (userChoice === 'S' && computerChoice === 'P'))
         // Check every win condition for the player
      {
         stats.wins++;
@@ -70,10 +70,11 @@ const playGame = function () {
         
       } else {
         // If above conditions failed, assume player lost
-
+        stats.losses++;
+        window.alert('You lost.');
       }
 
-      keepPlaying = false; // Ask user to play again, if not stop the loop
+      keepPlaying = window.confirm('Would you like to play again?'); // Ask user to play again, if not stop the loop
       
     }
   }
